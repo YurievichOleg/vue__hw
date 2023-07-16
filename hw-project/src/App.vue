@@ -11,6 +11,7 @@
     <NewsComponent />
     <BlogDetails />
     <ProjectsComponent />
+    <ProjectDetails />
     <FoooterBlock />
 
     <div v-for="product in products" :key="product.id">
@@ -47,6 +48,7 @@ import NewsComponent from "./components/NewsComponent.vue";
 import BlogDetails from "./components/BlogDetails.vue";
 import ProductDetails from "./components/ProductDetails.vue";
 import ProjectsComponent from "./components/ProjectsComponent.vue";
+import ProjectDetails from "./components/ProjectDetails.vue";
 
 // import CatsComp from './components/CatsComp.vue';
 // import HelloWorld from './components/HelloWorld.vue'
@@ -71,6 +73,7 @@ export default {
     BlogDetails,
     ProductDetails,
     ProjectsComponent,
+    ProjectDetails,
   },
   data() {
     return {
