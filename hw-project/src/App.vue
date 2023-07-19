@@ -1,17 +1,13 @@
 <template>
   <div id="app">
     <HeaderBlock />
-    <BannerComponent />
-    <FolowText />
-    <ProjectFotos />
-    <CounterComponent />
-    <BlogComponent />
-    <BlogBanner />
-    <LatestPost />
-    <NewsComponent />
+    <!-- <router-link to="/FirstCompjnent">FFFFF</router-link> -->
+    <router-view />
+    <!-- <FirstCompjnent /> -->
+    <!-- <BlogPage />
     <BlogDetails />
     <ProjectsComponent />
-    <ProjectDetails />
+    <ProjectDetails /> -->
     <FoooterBlock />
 
     <div v-for="product in products" :key="product.id">
@@ -21,59 +17,31 @@
         :available="product.available"
       />
     </div>
-
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome brother father and sons and daugther and anybody or any" />
-    <HelloWorld msg="AAAAAAAAAAAAAAAAAAAAAA" />
-    <NewComp msg="I'm Mr Bombastic tell me fantastic" />
-    <HelloWorld msg="AAAAAAAAAAAAAAAAAAAAAA" /> -->
-    <!-- <CatsComp/> -->
-    <!-- <NewComp msg=" Start " />
-    <NewComp msg=" Start1 " />
-    <NewComp msg=" Start 2" /> -->
   </div>
 </template>
 
 <script>
 import HeaderBlock from "./components/HeaderBlock.vue";
 import FoooterBlock from "./components/FooterBlock.vue";
-import BannerComponent from "./components/BannerComponent.vue";
-import FolowText from "./components/FolowText.vue";
-import ProjectFotos from "./components/ProjectFotos";
-import CounterComponent from "./components/CounterComponent";
-import BlogComponent from "./components/BlogComponent.vue";
-import BlogBanner from "./components/BlogBanner.vue";
-import LatestPost from "./components/LatestPost.vue";
-import NewsComponent from "./components/NewsComponent.vue";
-import BlogDetails from "./components/BlogDetails.vue";
-import ProductDetails from "./components/ProductDetails.vue";
-import ProjectsComponent from "./components/ProjectsComponent.vue";
-import ProjectDetails from "./components/ProjectDetails.vue";
-
-// import CatsComp from './components/CatsComp.vue';
-// import HelloWorld from './components/HelloWorld.vue'
-// import NewComp from './components/NewComp.vue';
-
+// import FirstCompjnent from "./components/FirstCompjnent.vue";
+// import BlogPage from "./components/BlogPage.vue";
+// import BlogDetails from "./components/BlogDetails.vue";
+// import ProductDetails from "./components/ProductDetails.vue";
+// import ProjectsComponent from "./components/ProjectsComponent.vue";
+// import ProjectDetails from "./components/ProjectDetails.vue";
+// import router from "./router";
 export default {
   name: "App",
   components: {
-    // HelloWorld,
-    // NewComp,
-    // CatsComp,
     HeaderBlock,
     FoooterBlock,
-    BannerComponent,
-    FolowText,
-    ProjectFotos,
-    CounterComponent,
-    BlogComponent,
-    BlogBanner,
-    LatestPost,
-    NewsComponent,
-    BlogDetails,
-    ProductDetails,
-    ProjectsComponent,
-    ProjectDetails,
+    // FirstCompjnent,
+    // BlogPage,
+    // BlogDetails,
+    // ProductDetails,
+    // ProjectsComponent,
+    // ProjectDetails,
+    // router,
   },
   data() {
     return {
@@ -82,6 +50,9 @@ export default {
         { name: "something2", price: 1.99, available: false },
       ],
     };
+  },
+  created() {
+    this.$router.push({ name: "FirstCompjnent" });
   },
 };
 </script>
