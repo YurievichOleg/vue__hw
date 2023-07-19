@@ -6,6 +6,7 @@ import BlogPage from "@/components/BlogPage.vue";
 import BlogDetails from "@/components/BlogDetails";
 import ProjectsComponent from "@/components/ProjectsComponent";
 import ProjectDetails from "@/components/ProjectDetails";
+import NotFound from "@/components/NotFound"
 
 Vue.use(Router);
 
@@ -36,6 +37,15 @@ export default new Router({
             name: "ProjectDetails",
             component: ProjectDetails,
         },
+        {
+            path: "/NotFound",
+            name: "NotFound",
+            component: NotFound,
+        },
+        {
+            path: '*',
+            redirect: '/NotFound'
+        }
         // < />
         // <BlogDetails />
         // <ProjectsComponent />
